@@ -19,7 +19,7 @@ const Footer = () => {
           <div className="col-lg-4 mb-4 mb-lg-0">
             <h5 className="footer-heading">Quick Links</h5>
             <ul className="footer-links">
-              <li><a href="#">Home</a></li>
+              <li><a href="/">Home</a></li>
               <li><a href="#competitions">Competitions</a></li>
               <li><a href="#winners">Winners</a></li>
               <li><a href="#about">About</a></li>
@@ -28,10 +28,10 @@ const Footer = () => {
           <div className="col-lg-4">
             <h5 className="footer-heading">Connect With Us</h5>
             <div className="social-links">
-              <a href="#"><i className="fab fa-youtube"></i></a>
-              <a href="#"><i className="fab fa-facebook"></i></a>
-              <a href="#"><i className="fab fa-instagram"></i></a>
-              <a href="#"><i className="fab fa-twitter"></i></a>
+              <a href="/"><i className="fab fa-youtube"></i></a>
+              <a href="/"><i className="fab fa-facebook"></i></a>
+              <a href="/"><i className="fab fa-instagram"></i></a>
+              <a href="/"><i className="fab fa-twitter"></i></a>
             </div>
             <div className="contact-info">
               <p><i className="fas fa-envelope me-2"></i> contact@musiccompetitions.com</p>

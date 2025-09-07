@@ -9,7 +9,7 @@ const Header = () => {
     <header className="music-header" > 
       <nav className="navbar navbar-expand-lg navbar-dark">
         <div className="container">
-          <a className="navbar-brand" href="#"style={{color:"#000"}}>
+          <a className="navbar-brand" href="/"style={{color:"#000"}}>
 <img src={logo} alt="" />            
             Music Competitions
           </a>
@@ -19,19 +19,19 @@ const Header = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <a className="nav-link active" href="#">Home</a>
+                <a className="nav-link active" href="/">Home</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#competitions">Competitions</a>
+                <a className="nav-link" href="/competitions">Competitions</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#winners">Winners</a>
+                <a className="nav-link" href="/winners">Winners</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#about">About</a>
+                <a className="nav-link" href="/about">About</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#contact">Contact</a>
+                <a className="nav-link" href="/contact">Contact</a>
               </li>
             </ul>
           </div>

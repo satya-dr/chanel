@@ -1,5 +1,6 @@
 // src/App.js
 import React from 'react';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import CompetitionList from './components/CompetitionList/CompetitionList';

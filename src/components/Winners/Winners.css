@@ -1,0 +1,21 @@
+/* src/components/Winners/Winners.css */
+.winners-section {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.winner-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.winner-card:hover {
+  transform: translateY(-10px);
+}
+
+.winner-card .card-image {
+  background: linear-gradient(to right, #ff3366, #ba265d);
+}

@@ -2,6 +2,21 @@
 .header{
   color: aquamarine;
 }
+.nav-item{
+  transition: all 0.3s;
+}
+.nav-item:hover{
+   transform: translateY(-3px);
+  
+   background-color: antiquewhite;
+}
+.nav-item{
+  margin-left: 10px;
+  background-color: rgba(173, 218, 214, 0.363);
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 15PX;
+
+}
 .music-header {
   background: rgba(176, 87, 87, 0.719);
   backdrop-filter: blur(10px);

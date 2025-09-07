@@ -1,124 +1,141 @@
 /* src/components/CompetitionList/CompetitionList.css */
 .competition-section {
-  padding: 80px 0;
-  background-color: #f8f9fa;
+  padding: 60px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 .section-title {
   text-align: center;
-  margin-bottom: 3rem;
-  font-weight: 700;
+  margin-bottom: 2.5rem;
+  font-weight: 800;
   color: #212529;
+  font-size: 2.25rem;
+  position: relative;
 }
 
-.competition-card {
-  border: none;
-  border-radius: 15px;
-  overflow: hidden;
-  transition: transform 0.3s;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.competition-card:hover {
-  transform: translateY(-10px);
-}
-
-.card-image {
-  height: 200px;
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
   background: linear-gradient(to right, #6a11cb, #2575fc);
+  margin: 15px auto;
+  border-radius: 2px;
+}
+
+/* Static Notification Styles */
+.static-notification {
+  background: linear-gradient(135deg, rgba(192, 60, 159, 0.15) 0%, rgba(192, 60, 159, 0.25) 100%);
+  padding: 16px 20px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 4rem;
+  flex-wrap: wrap;
+  gap: 12px;
+  border: 1px solid rgba(192, 60, 159, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.notification-badge {
+  background: linear-gradient(135deg, #c03c9f 0%, #a8328d 100%);
   color: white;
-}
-
-.card-body {
-  padding: 1.5rem;
-}
-
-.card-title {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  white-space: nowrap;
 }
 
-
-/* src/components/CompetitionList/CompetitionList.css */
-.competition-section {
-  padding: 80px 0;
-  background-color: #f8f9fa;
+.notification-content {
+  flex: 1;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
-.section-title {
-  text-align: center;
-  margin-bottom: 3rem;
+.notification-link {
+  text-decoration: none;
+  color: #fff;
   font-weight: 700;
-  color: #212529;
+  background: linear-gradient(135deg, #00e1ff 0%, #00a8ff 100%);
+  padding: 8px 18px;
+  border-radius: 8px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 225, 255, 0.3);
+  white-space: nowrap;
+}
+
+.notification-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 225, 255, 0.4);
 }
 
 /* Notification Swiper Styles */
 .notification-swiper-container {
   background: white;
-  border-radius: 12px;
-  padding: 40px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
   position: relative;
-}
-.notification-swiper-container .tapan{
-  background-color: #c03c9f67;
-  padding: 20px;
-  border-radius: 10px;
-}
-.notification-swiper-container .tapan a{
-  text-decoration: none;
-  color: #460303;
-  font-weight: 800;
-    background-color: rgba(0, 225, 255, 0.753);
-    padding: 10px;
-    border-radius: 10px;
+  overflow: hidden;
 }
 
 .notification-header {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
   color: #6a11cb;
-  font-weight: 600;
-  padding: 20px;
-  font-size: 1.1rem;
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.notification-header i {
+  font-size: 1.3rem;
 }
 
 .notification-swiper {
   width: 100%;
-  height: 60px;
+  min-height: 70px;
+  margin-bottom: 15px;
 }
 
 .notification-slide {
   display: flex;
   align-items: center;
   height: 100%;
-  padding: 40px;
-  border-radius: 8px;
+  padding: 18px 20px;
+  border-radius: 10px;
 }
 
 .notification-slide.info {
-  background-color: #e9f5ff;
-  border-left: 4px solid #2196f3;
+  background: linear-gradient(90deg, #e9f5ff 0%, #d8ebff 100%);
+  border-left: 5px solid #2196f3;
 }
 
 .notification-slide.urgent {
-  background-color: #ffebee;
-  border-left: 4px solid #f44336;
+  background: linear-gradient(90deg, #ffebee 0%, #ffdde1 100%);
+  border-left: 5px solid #f44336;
 }
 
 .notification-slide.success {
-  background-color: #f0f9eb;
-  border-left: 4px solid #4caf50;
+  background: linear-gradient(90deg, #f0f9eb 0%, #e2f3e5 100%);
+  border-left: 5px solid #4caf50;
 }
 
 .notification-slide.warning {
-  background-color: #fff8e6;
-  border-left: 4px solid #ff9800;
+  background: linear-gradient(90deg, #fff8e6 0%, #fff1cc 100%);
+  border-left: 5px solid #ff9800;
 }
 
 .notification-content {
@@ -127,67 +144,526 @@
 }
 
 .notification-text {
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 500;
+  line-height: 1.5;
+}
+.click a{
+  color: #000000;
+  padding: 5px;
+  border-radius: 10px;
+   background-color: #ffd900cb;
+   text-decoration: none;
+
+}
+.notification-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
 .notification-pagination {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  gap: 8px;
 }
 
 .notification-pagination .swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   background-color: #6a11cb;
   opacity: 0.4;
-  margin: 0 4px;
   cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 50%;
 }
 
 .notification-pagination .swiper-pagination-bullet-active {
   opacity: 1;
+  transform: scale(1.2);
 }
 
+.notification-prev, .notification-next {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(106, 17, 203, 0.3);
+}
+
+.notification-prev:hover, .notification-next:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(106, 17, 203, 0.4);
+}
+
+/* Competition Grid Layout */
+.competition-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* Competition Card Styles */
 .competition-card {
   border: none;
-  border-radius: 15px;
+  border-radius: 20px;
   overflow: hidden;
-  transition: transform 0.3s;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .competition-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(106, 17, 203, 0.2);
 }
 
 .card-image {
   height: 200px;
-  background: linear-gradient(to right, #6a11cb, #2575fc);
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 4rem;
   color: white;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.competition-card:hover .card-image {
+  transform: scale(1.05);
+}
+
+.card-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,50 C20,0 50,0 100,50 L100,100 L0,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+  background-size: 100% 100%;
 }
 
 .card-body {
-  padding: 1.5rem;
+  padding: 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-title {
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: #2d3748;
+  line-height: 1.4;
+}
+
+.card-details {
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.card-text {
+  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  color: #4a5568;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.text-label {
+  font-weight: 600;
+  margin-right: 5px;
+  min-width: 70px;
+  color: #2d3748;
+}
+
+.card-text:hover {
+  color: #2d3748;
+  transform: translateX(5px);
+}
+
+.card-text i {
+  width: 25px;
+  color: #6a11cb;
+  font-size: 1.1rem;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+
+.card-text:hover i {
+  transform: scale(1.2);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
   font-weight: 700;
-  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(106, 17, 203, 0.3);
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  color: white;
+  margin-top: auto;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: all 0.6s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(106, 17, 203, 0.4);
+  color: white;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
 }
 
 /* Responsive adjustments */
+@media (max-width: 1200px) {
+  .competition-section {
+    padding: 50px 0;
+  }
+  
+  .competition-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .card-image {
+    height: 180px;
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  
+  .static-notification {
+    padding: 14px 18px;
+  }
+  
+  .notification-badge {
+    font-size: 0.8rem;
+    padding: 5px 12px;
+  }
+  
+  .notification-link {
+    padding: 7px 15px;
+    font-size: 0.9rem;
+  }
+  
+  .notification-swiper-container {
+    padding: 20px;
+  }
+  
+  .notification-header {
+    font-size: 1.1rem;
+  }
+  
+  .notification-slide {
+    padding: 16px 18px;
+  }
+  
+  .notification-text {
+    font-size: 0.95rem;
+  }
+  
+  .competition-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .card-image {
+    height: 170px;
+    font-size: 3.25rem;
+  }
+  
+  .card-body {
+    padding: 1.75rem;
+  }
+  
+  .card-title {
+    font-size: 1.4rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .competition-section {
+    padding: 40px 0;
+  }
+  
+  .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .static-notification {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 16px;
+  }
+  
+  .notification-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .notification-link {
+    margin-left: 0;
+  }
+  
+  .notification-swiper-container {
+    padding: 18px;
+    border-radius: 14px;
+  }
+  
+  .notification-header {
+    font-size: 1rem;
+    margin-bottom: 14px;
+  }
+  
+  .notification-swiper {
+    min-height: 80px;
+  }
+  
+  .notification-slide {
+    padding: 14px 16px;
+  }
+  
+  .notification-text {
+    font-size: 0.9rem;
+  }
+  
+  .notification-controls {
+    gap: 15px;
+  }
+  
+  .notification-prev, .notification-next {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+  
+  .competition-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  
+  .card-image {
+    height: 160px;
+    font-size: 3rem;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .card-title {
+    font-size: 1.3rem;
+  }
+  
+  .text-label {
+    min-width: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  .competition-section {
+    padding: 30px 0;
+  }
+  
+  .section-title {
+    font-size: 1.4rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .static-notification {
+    padding: 10px 14px;
+    border-radius: 10px;
+  }
+  
+  .notification-badge {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+  }
+  
+  .notification-content span {
+    font-size: 0.9rem;
+  }
+  
+  .notification-link {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+  
+  .notification-swiper-container {
+    padding: 16px;
+    border-radius: 12px;
+  }
+  
+  .notification-header {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+  }
+  
+  .notification-swiper {
+    min-height: 90px;
+  }
+  
+  .notification-slide {
+    padding: 12px 14px;
+    border-radius: 8px;
+  }
+  
   .notification-text {
     font-size: 0.85rem;
   }
   
-  .notification-swiper {
-    height: 80px;
+  .notification-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .notification-prev, .notification-next {
+    width: 28px;
+    height: 28px;
+    font-size: 0.8rem;
+  }
+  
+  .competition-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .card-image {
+    height: 150px;
+    font-size: 2.75rem;
+  }
+  
+  .card-body {
+    padding: 1.25rem;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .card-details {
+    margin-bottom: 1.5rem;
+  }
+  
+  .card-text {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .text-label {
+    min-width: 55px;
+  }
+  
+  .btn-primary {
+    padding: 10px 20px;
+    font-size: 0.95rem;
   }
 }
+
+@media (max-width: 400px) {
+  .notification-content span {
+    font-size: 0.85rem;
+  }
+  
+  .notification-link {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+  
+  .notification-swiper {
+    min-height: 100px;
+  }
+  
+  .card-image {
+    height: 140px;
+    font-size: 2.5rem;
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+  
+  .card-title {
+    font-size: 1.1rem;
+  }
+  
+  .card-text {
+    font-size: 0.9rem;
+  }
+  
+  .text-label {
+    min-width: 50px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Animation for cards when they enter viewport */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.competition-card {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Delay animations for staggered effect */
+.competition-card:nth-child(1) { animation-delay: 0.1s; }
+.competition-card:nth-child(2) { animation-delay: 0.2s; }
+.competition-card:nth-child(3) { animation-delay: 0.3s; }
+.competition-card:nth-child(4) { animation-delay: 0.4s; }
+.competition-card:nth-child(5) { animation-delay: 0.5s; }
+.competition-card:nth-child(6) { animation-delay: 0.6s; }

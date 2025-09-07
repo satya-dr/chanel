@@ -1,5 +1,6 @@
 // src/components/Footer/Footer.js
 import React from 'react';
+import logo from "../images/logo.png";
 import './Footer.css';
 
 const Footer = () => {
@@ -9,7 +10,7 @@ const Footer = () => {
         <div className="row">
           <div className="col-lg-4 mb-4 mb-lg-0">
             <h5 className="footer-brand">
-              <i className="fas fa-music me-2"></i>
+           <img src={logo} alt="" />
               UJAN ETV
             </h5>
             <p className="footer-text">
@@ -28,14 +29,14 @@ const Footer = () => {
           <div className="col-lg-4">
             <h5 className="footer-heading">Connect With Us</h5>
             <div className="social-links">
-              <a href="/"><i className="fab fa-youtube"></i></a>
+              <a href="https://www.youtube.com/@UJANETV"><i className="fab fa-youtube"></i></a>
               <a href="/"><i className="fab fa-facebook"></i></a>
               <a href="/"><i className="fab fa-instagram"></i></a>
               <a href="/"><i className="fab fa-twitter"></i></a>
             </div>
             <div className="contact-info">
-              <p><i className="fas fa-envelope me-2"></i> contact@musiccompetitions.com</p>
-              <p><i className="fas fa-phone me-2"></i> +1 (123) 456-7890</p>
+              <p><i className="fas fa-envelope me-2"></i> satyajit@gmail.com</p>
+              <p><i className="fas fa-phone me-2"></i> +91 XXXXXXX268</p>
             </div>
           </div>
         </div>

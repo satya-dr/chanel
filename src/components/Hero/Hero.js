@@ -42,7 +42,7 @@ const Hero = () => {
             <a href="https://www.youtube.com/@UJANETV" className="btn btn-danger btn-lg hero-cta me-3">
               <i className="fab fa-youtube me-2"></i>YouTube চ্যানেল
             </a>
-            <a href="#latest" className="btn btn-primary btn-lg hero-cta">
+            <a href="/latest" className="btn btn-primary btn-lg hero-cta">
               <i className="fas fa-music me-2"></i>সর্বশেষ গান
             </a>
           </div>

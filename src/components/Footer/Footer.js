@@ -20,9 +20,9 @@ const Footer = () => {
             <h5 className="footer-heading">Quick Links</h5>
             <ul className="footer-links">
               <li><a href="/">Home</a></li>
-              <li><a href="#competitions">Competitions</a></li>
-              <li><a href="#winners">Winners</a></li>
-              <li><a href="#about">About</a></li>
+              <li><a href="/competitions">Competitions</a></li>
+              <li><a href="/winners">Winners</a></li>
+              <li><a href="/about">About</a></li>
             </ul>
           </div>
           <div className="col-lg-4">
@@ -45,8 +45,8 @@ const Footer = () => {
             <p className="copyright">&copy; 2023 Music Competitions. All rights reserved.</p>
           </div>
           <div className="col-md-6 text-md-end">
-            <a href="#" className="footer-link">Privacy Policy</a>
-            <a href="#" className="footer-link">Terms of Service</a>
+            <a href="/" className="footer-link">Privacy Policy</a>
+            <a href="/" className="footer-link">Terms of Service</a>
           </div>
         </div>
       </div>

@@ -1,13 +1,25 @@
 /* src/components/Header/Header.css */
+.header{
+  color: aquamarine;
+}
 .music-header {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(176, 87, 87, 0.719);
   backdrop-filter: blur(10px);
+  color: black;
   position: sticky;
   top: 0;
+  font-weight: 800;
   z-index: 1000;
 }
 
 .navbar-brand {
   font-weight: 700;
   font-size: 1.5rem;
+}
+.navbar-brand img{
+  height: 3rem;
+  width: 3rem;
+  margin-right: 10px;
+  border-radius: 50%;
+  
 }

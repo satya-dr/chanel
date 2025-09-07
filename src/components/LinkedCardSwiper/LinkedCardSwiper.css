@@ -1,0 +1,129 @@
+/* src/components/LinkCardSwiper/LinkCardSwiper.css */
+.link-cards-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.section-subtitle {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+.link-cards-swiper {
+  padding: 20px 10px 50px;
+}
+
+.link-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 100%;
+}
+
+.link-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-image-container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.link-card:hover .card-image {
+  transform: scale(1.05);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-title {
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #212529;
+}
+
+.card-description {
+  color: #6c757d;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.card-button {
+  display: inline-block;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.card-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(106, 17, 203, 0.4);
+  color: white;
+}
+
+/* Swiper navigation styles */
+.link-cards-swiper .swiper-button-next,
+.link-cards-swiper .swiper-button-prev {
+  color: #6a11cb;
+  background: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.link-cards-swiper .swiper-button-next:after,
+.link-cards-swiper .swiper-button-prev:after {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.link-cards-swiper .swiper-pagination-bullet {
+  background: #6a11cb;
+  opacity: 0.5;
+  width: 12px;
+  height: 12px;
+}
+
+.link-cards-swiper .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .link-cards-swiper {
+    padding: 20px 5px 50px;
+  }
+  
+  .link-cards-swiper .swiper-button-next,
+  .link-cards-swiper .swiper-button-prev {
+    display: none;
+  }
+}

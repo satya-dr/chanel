@@ -39,7 +39,7 @@ const Hero = () => {
               আপনার YouTube চ্যানেলে স্বাগতম! এখানে আমি গান আপলোড করি এবং সঙ্গীত প্রতিযোগিতার আয়োজন করি। 
               আমার সর্বশেষ গানগুলি শুনুন এবং আমার প্রতিযোগিতায় অংশ নিন।
             </p>
-            <a href="[YouTube চ্যানেল লিংক]" className="btn btn-danger btn-lg hero-cta me-3">
+            <a href="https://www.youtube.com/@UJANETV" className="btn btn-danger btn-lg hero-cta me-3">
               <i className="fab fa-youtube me-2"></i>YouTube চ্যানেল
             </a>
             <a href="#latest" className="btn btn-primary btn-lg hero-cta">

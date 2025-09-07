@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="col-lg-4 mb-4 mb-lg-0">
             <h5 className="footer-brand">
               <i className="fas fa-music me-2"></i>
-              Music Competitions
+              UJAN ETV
             </h5>
             <p className="footer-text">
               Promoting musical talent and providing a platform for artists to showcase their skills.

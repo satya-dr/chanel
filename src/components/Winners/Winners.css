@@ -19,3 +19,172 @@
 .winner-card .card-image {
   background: linear-gradient(to right, #ff3366, #ba265d);
 }
+
+/* src/components/Winners/Winners.css (New Features CSS) */
+
+/* General adjustments */
+.sub-section-title {
+  text-align: center;
+  font-weight: 700;
+  color: #6a11cb;
+  font-size: 1.8rem;
+  margin-top: 3rem;
+}
+
+/* Winner Highlight Card (New Component) */
+.winner-highlight-card {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #212529 0%, #495057 100%);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  max-width: 900px;
+  margin: 0 auto;
+  color: white;
+  transition: transform 0.4s ease;
+}
+
+.winner-highlight-card:hover {
+  transform: translateY(-5px);
+}
+
+.highlight-image {
+  flex-shrink: 0;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, #ff3366 0%, #c03c9f 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  position: relative;
+}
+
+.highlight-content {
+  padding: 30px 40px;
+}
+
+.highlight-badge {
+  display: inline-block;
+  background-color: #ffd700;
+  color: #212529;
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.highlight-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.highlight-competition, .highlight-song {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #ced4da;
+}
+
+.highlight-song strong {
+    color: #fff;
+}
+
+.highlight-cta {
+  background: #ff3366;
+  border: none;
+  margin-top: 20px;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.highlight-cta:hover {
+  background: #c03c9f;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 51, 102, 0.5);
+}
+
+/* Responsive adjustment for highlight card */
+@media (max-width: 768px) {
+  .winner-highlight-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .highlight-image {
+    width: 100%;
+    height: 200px;
+  }
+  .highlight-content {
+    padding: 25px;
+  }
+  .highlight-title {
+    font-size: 2rem;
+  }
+}
+
+/* Status Badge for Competition Card */
+.status-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.badge-open {
+    background: linear-gradient(45deg, #4caf50, #8bc34a); /* Green */
+}
+
+.badge-upcoming {
+    background: linear-gradient(45deg, #ff9800, #ffc107); /* Amber/Yellow */
+}
+
+.badge-closed {
+    background: linear-gradient(45deg, #f44336, #e91e63); /* Red */
+}
+
+/* Style for unavailable buttons */
+.competition-card .btn-secondary {
+    background: #6c757d;
+    border: none;
+    box-shadow: none;
+    cursor: default;
+}
+.competition-card .btn-secondary:hover {
+    transform: none;
+    box-shadow: none;
+}
+.competition-card .btn-outline-danger {
+    background: #f8f9fa;
+    color: #dc3545;
+    border: 1px solid #dc3545;
+    box-shadow: none;
+    cursor: default;
+}
+.competition-card .btn-outline-danger:hover {
+    transform: none;
+    box-shadow: none;
+    background: #f8f9fa;
+    color: #dc3545;
+}
+
+.no-competition-message {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #6c757d;
+    padding: 40px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}

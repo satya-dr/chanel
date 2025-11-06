@@ -1,28 +1,24 @@
-// src/App.js
+// src/App.js (সম্পূর্ণ সংশোধিত)
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import Header from './components/Header/Header';
-import Hero from './components/Hero/Hero';
-import CompetitionList from './components/CompetitionList/CompetitionList';
-import Winners from './components/Winners/Winners';
-import LinkedCard from './components/LinkedCardSwiper/LinkedCardSwiper';
-import About from './components/About/About';
-import Footer from './components/Footer/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
+// Pages
+import HomePage from './pages/HomePage';
+import GalleryPage from './pages/GalleryPage';
+
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Hero />
-      <CompetitionList />
-      <Winners />
-      <LinkedCard />
-
-      <About />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/gallery" element={<GalleryPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

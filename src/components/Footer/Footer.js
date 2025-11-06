@@ -43,7 +43,7 @@ const Footer = () => {
         <hr className="footer-divider" />
         <div className="row">
           <div className="col-md-6">
-            <p className="copyright">&copy; 2023 Music Competitions. All rights reserved.</p>
+            <p className="copyright">&copy; 2025 Music Competitions. All rights reserved.</p>
           </div>
           <div className="col-md-6 text-md-end">
             <a href="/" className="footer-link">Privacy Policy</a>

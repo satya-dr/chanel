@@ -12,18 +12,18 @@ const CompetitionCard = ({ competition }) => {
         <div className="card-details">
           <p className="card-text">
             <i className="far fa-calendar-alt"></i>
-            <span className="text-label">Deadline:</span> {competition.deadline}
+            <span className="text-label">শেষ তারিখ:</span> {competition.deadline}
           </p>
           <p className="card-text">
             <i className="fas fa-award"></i>
-            <span className="text-label">Prize:</span> {competition.prize}
+            <span className="text-label">পুরস্কার:</span> {competition.prize}
           </p>
           <p className="card-text">
             <i className="fas fa-users"></i>
-            <span className="text-label">Entries:</span> {competition.entries}
+            <span className="text-label">অংশগ্রহণ:</span> {competition.entries}
           </p>
         </div>
-        <button className="btn btn-primary">Participate Now</button>
+        <button className="btn btn-primary">এখনই অংশগ্রহণ করুন</button>
       </div>
     </div>
   );

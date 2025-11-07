@@ -1,4 +1,4 @@
-// src/components/Header/Header.js
+// src/components/Header/Header.js (সম্পূর্ণ সংশোধিত)
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from "../images/logo.png";
@@ -31,19 +31,6 @@ const Header = () => {
 
   const toggleDropdown = (dropdown) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-  };
-
-  const scrollToSection = (sectionId) => {
-    closeMobileMenu();
-    
-    if (location.pathname !== '/') {
-      window.location.href = `/#${sectionId}`;
-    } else {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
   };
 
   const isActive = (path) => {
@@ -107,30 +94,31 @@ const Header = () => {
                   <i className="dropdown-arrow">▼</i>
                 </button>
                 <div className={`dropdown-menu ${activeDropdown === 'music' ? 'show' : ''}`}>
-                  <Link className="dropdown-item" to="/songs" onClick={closeMobileMenu}>
-                    <i className="dropdown-icon">🎤</i>
+                  <Link className="dropdown-item" to="/all-songs" onClick={closeMobileMenu}>
+                    <i className="dropdown-icon">🎵</i>
                     সকল গান
                   </Link>
                   <Link className="dropdown-item" to="/artists" onClick={closeMobileMenu}>
                     <i className="dropdown-icon">👨‍🎤</i>
                     শিল্পীবৃন্দ
                   </Link>
-                  <button className="dropdown-item" onClick={() => scrollToSection('latest')}>
+                  <Link className="dropdown-item" to="/new-songs" onClick={closeMobileMenu}>
                     <i className="dropdown-icon">🆕</i>
                     নতুন গান
-                  </button>
+                  </Link>
                 </div>
               </li>
 
               {/* Competitions */}
               <li className="nav-item">
-                <button 
-                  className="nav-link"
-                  onClick={() => scrollToSection('competitions')}
+                <Link 
+                  className={`nav-link ${isActive('/competitions') ? 'active' : ''}`}
+                  to="/competitions"
+                  onClick={closeMobileMenu}
                 >
                   <i className="nav-icon">🏆</i>
                   <span className="nav-text">প্রতিযোগিতা</span>
-                </button>
+                </Link>
               </li>
 
               {/* Events Dropdown */}
@@ -152,45 +140,31 @@ const Header = () => {
                     <i className="dropdown-icon">📅</i>
                     upcoming Events
                   </Link>
-                  <button className="dropdown-item" onClick={() => scrollToSection('festival')}>
+                  <Link className="dropdown-item" to="/festival" onClick={closeMobileMenu}>
                     <i className="dropdown-icon">🎪</i>
                     উৎসব
-                  </button>
+                  </Link>
                 </div>
               </li>
 
               {/* About */}
               <li className="nav-item">
-                <button 
-                  className="nav-link"
-                  onClick={() => scrollToSection('about')}
+                <Link 
+                  className={`nav-link ${isActive('/about') ? 'active' : ''}`}
+                  to="/about"
+                  onClick={closeMobileMenu}
                 >
                   <i className="nav-icon">ℹ️</i>
                   <span className="nav-text">সম্পর্কে</span>
-                </button>
-              </li>
-
-              {/* Gallery */}
-              <li className="nav-item">
-                <Link 
-                  className={`nav-link ${isActive('/gallery') ? 'active' : ''}`}
-                  to="/gallery"
-                  onClick={closeMobileMenu}
-                >
-                  <i className="nav-icon">🖼️</i>
-                  <span className="nav-text">গ্যালারি</span>
                 </Link>
               </li>
 
               {/* CTA Button */}
               <li className="nav-item nav-cta">
-                <button 
-                  className="cta-button"
-                  onClick={() => scrollToSection('register')}
-                >
+                <Link to="/register" className="cta-button" onClick={closeMobileMenu}>
                   <i className="cta-icon">🎤</i>
                   <span>নিবন্ধন করুন</span>
-                </button>
+                </Link>
               </li>
             </ul>
           </div>

@@ -1,4 +1,4 @@
-// src/components/LinkedCardSwiper/LinkedCardSwiper.js (সম্পূর্ণ সংশোধিত)
+// src/components/LinkedCardSwiper/LinkedCardSwiper.js (সংশোধিত)
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -9,72 +9,89 @@ import 'swiper/css/pagination';
 import './LinkCardSwiper.css';
 import videosData from '../../data/videos';
 
-const LinkCardSwiper = () => {
-  const featuredVideos = videosData.featured; // শুধু ৩টি ভিডিও
+const LinkedCardSwiper = () => {
+  const featuredVideos = videosData.featured;
 
   return (
-    <section className="featured-videos-section">
-      <div className="container">
-        <div className="section-header">
-          <h2 className="section-title">Featured Videos</h2>
-          <p className="section-subtitle">আমার চ্যানেলের বিশেষ ভিডিওগুলো দেখুন</p>
-          <Link to="/gallery" className="view-all-btn">
-            View All <i className="fas fa-arrow-right ms-2"></i>
+    <section className="linked-card-swiper-section">
+      <div className="linked-container">
+        <div className="linked-section-header">
+          <div className="linked-header-content">
+            <h2 className="linked-section-title">ভাওয়াইয়া গান</h2>
+            <p className="linked-section-subtitle">আমার চ্যানেলের বিশেষ ভাওয়াইয়া গানগুলো শুনুন</p>
+          </div>
+          <Link to="/all-songs" className="linked-view-all-btn">
+            সকল গান <i className="fas fa-arrow-right ms-2"></i>
           </Link>
         </div>
         
-        <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
-          spaceBetween={30}
-          slidesPerView={1}
-          navigation
-          pagination={{ clickable: true }}
-          autoplay={{
-            delay: 5000,
-            disableOnInteraction: false,
-          }}
-          breakpoints={{
-            640: {
-              slidesPerView: 1,
-            },
-            768: {
-              slidesPerView: 2,
-            },
-            1024: {
-              slidesPerView: 3,
-            },
-          }}
-          className="featured-videos-swiper"
-        >
-          {featuredVideos.map(video => (
-            <SwiperSlide key={video.id}>
-              <div className="video-card">
-                <div className="card-image-container">
-                  <img src={video.image} alt={video.title} className="card-image" />
-                  <div className="image-overlay"></div>
-                  <div className="video-badge">{video.category === 'popular' ? '🔥 Popular' : '🆕 Recent'}</div>
-                  <div className="video-duration">{video.duration}</div>
-                </div>
-                <div className="card-content">
-                  <h3 className="card-title">{video.title}</h3>
-                  <p className="card-description">{video.description}</p>
-                  <div className="video-meta">
-                    <span className="video-views">
-                      <i className="fas fa-eye me-1"></i>
-                      {video.views} views
-                    </span>
+        <div className="linked-swiper-container">
+          <Swiper
+            modules={[Navigation, Pagination, Autoplay]}
+            spaceBetween={30}
+            slidesPerView={1}
+            navigation={{
+              nextEl: '.linked-swiper-button-next',
+              prevEl: '.linked-swiper-button-prev',
+            }}
+            pagination={{
+              el: '.linked-swiper-pagination',
+              clickable: true,
+            }}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+            }}
+            breakpoints={{
+              640: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
+            className="linked-featured-swiper"
+          >
+            {featuredVideos.map(video => (
+              <SwiperSlide key={video.id}>
+                <div className="linked-video-card">
+                  <div className="linked-card-image-container">
+                    <img src={video.image} alt={video.title} className="linked-card-image" />
+                    <div className="linked-image-overlay"></div>
+                    <div className="linked-video-badge">
+                      {video.category === 'popular' ? '🔥 জনপ্রিয়' : '🆕 নতুন'}
+                    </div>
+                    <div className="linked-video-duration">{video.duration}</div>
                   </div>
-                  <a href={video.link} target="_blank" rel="noopener noreferrer" className="card-button">
-                    {video.buttonText} <i className="fas fa-arrow-right ms-2"></i>
-                  </a>
+                  <div className="linked-card-content">
+                    <h3 className="linked-card-title">{video.title}</h3>
+                    <p className="linked-card-description">{video.description}</p>
+                    <div className="linked-video-meta">
+                      <span className="linked-video-views">
+                        <i className="fas fa-eye me-1"></i>
+                        {video.views} বার দেখা
+                      </span>
+                    </div>
+                    <a href={video.link} target="_blank" rel="noopener noreferrer" className="linked-card-button">
+                      {video.buttonText} <i className="fas fa-arrow-right ms-2"></i>
+                    </a>
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          
+          {/* Custom Navigation */}
+          <div className="linked-swiper-button-next"></div>
+          <div className="linked-swiper-button-prev"></div>
+          <div className="linked-swiper-pagination"></div>
+        </div>
       </div>
     </section>
   );
 };
 
-export default LinkCardSwiper;
+export default LinkedCardSwiper;

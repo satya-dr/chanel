@@ -1,22 +1,29 @@
-// src/components/CompetitionList/CompetitionList.js (Updated - Without Notifications)
+// src/components/CompetitionList/CompetitionList.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 import CompetitionCard from './CompetitionCard';
+import { competitionsData } from '../../data/competitions';
 import './CompetitionList.css';
 
 const CompetitionList = () => {
-  const competitions = [
-    { id: 1, name: "Spring Melody 2023", deadline: "June 30, 2023", prize: "$5,000", entries: 243 },
-    { id: 2, name: "Vocal Championship", deadline: "July 15, 2023", prize: "$3,000", entries: 187 },
-    { id: 3, name: "Instrumental Masters", deadline: "August 1, 2023", prize: "$4,500", entries: 156 },
-  ];
+  // শুধু featured competitions (৩টি) নেওয়া হচ্ছে
+  const featuredCompetitions = competitionsData.featured;
 
   return (
     <section id="competitions" className="competition-section">
       <div className="container">
-        <h2 className="section-title">Current Competitions</h2>
+        <div className="section-header">
+          <div className="header-content">
+            <h2 className="section-title">বর্তমান প্রতিযোগিতাসমূহ</h2>
+            <p className="section-subtitle">উত্তরবঙ্গের সেরা ভাওয়াইয়া প্রতিযোগিতায় অংশ নিন</p>
+          </div>
+          <Link to="/competitions" className="view-all-btn">
+            সকল প্রতিযোগিতা <i className="fas fa-arrow-right ms-2"></i>
+          </Link>
+        </div>
         
         <div className="competition-grid">
-          {competitions.map(competition => (
+          {featuredCompetitions.map(competition => (
             <CompetitionCard key={competition.id} competition={competition} />
           ))}
         </div>

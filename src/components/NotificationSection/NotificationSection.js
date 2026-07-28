@@ -1,4 +1,3 @@
-// src/components/NotificationSection/NotificationSection.js
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
@@ -29,7 +28,7 @@ const NotificationSection = () => {
     },
     { 
       id: 4, 
-      text: "📢 নতুন নিয়ম: সকল অংশগ্রহণকারীদেরকে অবশ্যই নিয়মাবলী পড়তে হবে", 
+      text: "📢 নতুন নিয়ম: সকল অংশগ্রহণকারীদেরকে অবশ্যই নিয়মাবলী পড়তে হবে", 
       type: "warning",
       link: "/"
     }
@@ -38,11 +37,10 @@ const NotificationSection = () => {
   return (
     <section id="notifications" className="notification-section">
       <div className="container">
-        {/* Static Notification Banner */}
         <div className="static-notification mb-4">
-          <div className="notification-badge">New</div>
+          <div className="notification-badge">NEW</div>
           <div className="notification-content">
-            <span>🎉 নতুন প্রতিযোগিতা আসছে! আগামী সপ্তাহে থাকছে Folk Music Competition 👉 </span>
+            <span className="static-text">🎉 নতুন প্রতিযোগিতা আসছে! আগামী সপ্তাহে থাকছে Folk Music Competition 👉 </span>
             <a 
               href="https://docs.google.com/forms/d/e/1FAIpQLSfvVWE83NzbeG6hSGXbGdmls4EB_ADFlAFm0SF_BDEGqSP7ow/viewform?usp=header" 
               className="notification-link"
@@ -54,18 +52,17 @@ const NotificationSection = () => {
           </div>
         </div>
 
-        {/* Notification Swiper */}
         <div className="notification-swiper-container mb-5">
           <div className="notification-header">
-            <i className="fas fa-bullhorn me-2"></i>
-            <span>Important Announcements</span>
+            <span className="header-icon">📢</span>
+            <span>জরুরি ঘোষণা ও আপডেটসমূহ</span>
           </div>
           <Swiper
             modules={[Autoplay, Navigation, Pagination]}
-            spaceBetween={10}
+            spaceBetween={15}
             slidesPerView={1}
             autoplay={{
-              delay: 6000,
+              delay: 5000,
               disableOnInteraction: false,
             }}
             pagination={{ 
@@ -82,10 +79,10 @@ const NotificationSection = () => {
             {notifications.map(notification => (
               <SwiperSlide key={notification.id}>
                 <div className={`notification-slide ${notification.type}`}>
-                  <div className="notification-content">
+                  <div className="notification-slide-inner">
                     <span className="notification-text">{notification.text}</span>
                     <span className="click">
-                      👉<a href={notification.link}>Click Here</a>
+                      <a href={notification.link}>বিস্তারিত দেখুন →</a>
                     </span>
                   </div>
                 </div>  
@@ -93,9 +90,9 @@ const NotificationSection = () => {
             ))}
           </Swiper>
           <div className="notification-controls">
-            <div className="notification-prev"><i className="fas fa-chevron-left"></i></div>
+            <div className="notification-prev">‹</div>
             <div className="notification-pagination"></div>
-            <div className="notification-next"><i className="fas fa-chevron-right"></i></div>
+            <div className="notification-next">›</div>
           </div>
         </div>
       </div>

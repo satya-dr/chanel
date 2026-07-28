@@ -1,6 +1,4 @@
-// src/components/About/About.js
 import React from "react";
-// import logo from "./images/logo.png";
 import "./About.css";
 
 const About = () => {
@@ -9,47 +7,43 @@ const About = () => {
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-6">
-            <h2 className="section-title">About Our Channel</h2>
+            <div className="stage-badge-sm">🎭 আমাদের পথচলা</div>
+            <h2 className="section-title">আমাদের চ্যানেল সম্পর্কে</h2>
 
             <p className="about-text">
-              The Journey of Bhawaiya Music: From Tradition to Today Welcome to
-              UJAN ETV, your ultimate destination for the enchanting world of
-              Bhawaiya music! Our channel is dedicated to showcasing the rich
-              cultural heritage of this traditional folk genre, which originates
-              from the lush landscapes of North Bengal, India. Bhawaiya songs
-              are known for their soulful melodies and poignant lyrics that
-              often reflect the beauty of rural life, love, and the deep
-              connection to nature.
+              ভাওয়াইয়া সংগীতের ঐতিহ্যগত যাত্রা: অতীত থেকে বর্তমান। UJAN ETV-তে আপনাকে স্বাগতম, যা ভাওয়াইয়া সংগীতের অপূর্ব ভাবময় জগতের অনন্য ঠিকানা! আমাদের চ্যানেলটি উত্তরবঙ্গের নয়নাভিরাম প্রকৃতির কোল থেকে উদ্ভূত এই সমৃদ্ধ লোকসংগীতের সাংস্কৃতিক ঐতিহ্য তুলে ধরতে প্রতিশ্রুতিবদ্ধ। ভাওয়াইয়ার প্রতিটি সুর ও বাণী গ্রামবাংলার জীবন, ভালোবাসা এবং প্রকৃতির গভীর অনুভূতির মেলবন্ধন প্রকাশ করে।
             </p>
             <p className="about-text">
-              We invite you to subscribe to UJAN ETV and become part of our
-              growing community of music lovers. By hitting the notification
-              bell, you'll stay updated on our latest releases, including
-              exclusive performances, behind-the-scenes footage, and insightful
-              discussions about the significance of Bhawaiya music in today's
-              world. Together, let's celebrate the beauty of folk songs and keep
-              the spirit of Bhawaiya alive for generations to come. Your support
-              helps us continue this journey of musical exploration and cultural
-              appreciation!
+              আমাদের সংগীতপ্রেমী পরিবারের অংশ হতে আজই UJAN ETV সাবস্ক্রাইব করুন। বেল আইকনটি প্রেস করে আমাদের নতুন রিলিজ, এক্সক্লুসিভ পারফর্ম্যান্স এবং সাংস্কৃতিক আলোচনার আপডেট পান। আসুন, ভাওয়াইয়ার ঐতিহ্যকে বিশ্বমঞ্চে বাঁচিয়ে রাখি আগামী প্রজন্মের জন্য।
             </p>
-            <div className="stats row mt-5">
+            
+            <div className="stats row mt-4">
               <div className="col-4 text-center">
-                <h3 className="stat-number">50+</h3>
-                <p className="stat-label">Competitions</p>
+                <div className="stat-box">
+                  <h3 className="stat-number">৫০+</h3>
+                  <p className="stat-label">প্রতিযোগিতা</p>
+                </div>
               </div>
               <div className="col-4 text-center">
-                <h3 className="stat-number">5,000+</h3>
-                <p className="stat-label">Participants</p>
+                <div className="stat-box">
+                  <h3 className="stat-number">৫,০০০+</h3>
+                  <p className="stat-label">অংশগ্রহণকারী</p>
+                </div>
               </div>
               <div className="col-4 text-center">
-                <h3 className="stat-number">$100k+</h3>
-                <p className="stat-label">In Prizes</p>
+                <div className="stat-box">
+                  <h3 className="stat-number">লাখ+</h3>
+                  <p className="stat-label">পুরস্কার</p>
+                </div>
               </div>
             </div>
           </div>
-          <div className="col-lg-6">
-            <div className="about-image">
-              <i className="fas fa-users"></i>
+          
+          <div className="col-lg-6 mt-4 mt-lg-0">
+            <div className="about-image-wrapper">
+              <div className="about-image">
+                <span className="about-icon">🪕</span>
+              </div>
             </div>
           </div>
         </div>

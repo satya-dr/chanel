@@ -1,4 +1,3 @@
-// src/components/Events/Events.js
 import React from 'react';
 import { eventsData } from '../../data/events';
 import './Events.css';
@@ -10,8 +9,9 @@ const Events = () => {
     <section className="events-section">
       <div className="container">
         <div className="section-header">
-          <h1 className="section-title">আসন্ন ইভেন্ট</h1>
-          <p className="section-subtitle">ভাওয়াইয়া সংগীতের বিশেষ আয়োজনসমূহ</p>
+          <div className="stage-badge-sm">📅 সাংস্কৃতিক আয়োজন</div>
+          <h1 className="section-title">আসন্ন ইভেন্টসমূহ</h1>
+          <p className="section-subtitle">উত্তরবঙ্গের ঐতিহ্যবাহী ভাওয়াইয়া সংগীতের বিশেষ বিশেষ অনুষ্ঠান ও আসর</p>
         </div>
 
         <div className="events-grid">
@@ -25,11 +25,11 @@ const Events = () => {
                 <h3 className="event-title">{event.title}</h3>
                 <p className="event-description">{event.description}</p>
                 <div className="event-venue">
-                  <i className="fas fa-map-marker-alt"></i>
+                  <span className="venue-icon">📍</span>
                   <span>{event.venue}</span>
                 </div>
                 <button className="register-event-btn">
-                  রেজিস্টার করুন <i className="fas fa-user-plus"></i>
+                  রেজিস্টার করুন <span>→</span>
                 </button>
               </div>
             </div>

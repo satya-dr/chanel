@@ -1,4 +1,3 @@
-// src/components/LiveShows/LiveShows.js (সংশোধিত)
 import React from 'react';
 import { liveShowsData } from '../../data/liveShows';
 import './LiveShows.css';
@@ -10,8 +9,9 @@ const LiveShows = () => {
     <section className="live-shows-section">
       <div className="container">
         <div className="section-header">
-          <h1 className="section-title">লাইভ শো</h1>
-          <p className="section-subtitle">সরাসরি ভাওয়াইয়া সংগীতের আসর</p>
+          <div className="stage-badge-sm">🔴 সরাসরি সম্প্রচার</div>
+          <h1 className="section-title">লাইভ শো ও অনুষ্ঠান</h1>
+          <p className="section-subtitle">সরাসরি উত্তরবঙ্গের প্রখ্যাত শিল্পীদের ভাওয়াইয়া সংগীতের জমজমাট আসর দেখুন</p>
         </div>
 
         <div className="shows-container">
@@ -19,27 +19,29 @@ const LiveShows = () => {
             <div key={show.id} className="show-card">
               <div className="show-image">
                 <img src={show.image} alt={show.title} />
-                <div className="live-badge">লাইভ শীঘ্রই</div>
+                <div className="live-badge">● লাইভ শীঘ্রই</div>
               </div>
               <div className="show-info">
                 <h3 className="show-title">{show.title}</h3>
-                <p className="show-artist">{show.artist}</p>
+                <p className="show-artist">
+                  <span className="artist-icon">👤</span> {show.artist}
+                </p>
                 <div className="show-details">
                   <div className="detail">
-                    <i className="far fa-calendar"></i>
+                    <span className="detail-icon">📅</span>
                     <span>{show.date}</span>
                   </div>
                   <div className="detail">
-                    <i className="far fa-clock"></i>
+                    <span className="detail-icon">⏰</span>
                     <span>{show.time}</span>
                   </div>
                   <div className="detail">
-                    <i className="fas fa-map-marker-alt"></i>
+                    <span className="detail-icon">📍</span>
                     <span>{show.venue}</span>
                   </div>
                 </div>
                 <button className="reminder-btn">
-                  রিমাইন্ডার সেট করুন <i className="fas fa-bell"></i>
+                  রিমাইন্ডার সেট করুন <span>🔔</span>
                 </button>
               </div>
             </div>

@@ -1,4 +1,3 @@
-// src/components/Rules/FAQSection.js
 import React, { useState } from 'react';
 import './FAQSection.css'; 
 
@@ -17,17 +16,17 @@ const FAQSection = () => {
   const allFaqs = [
     { 
       question: "কেমন গান গাওয়া যাবে?", 
-      answer: "শুধুমাত্র **ভাওয়াইয়া বা লোকসংগীত** এই প্রতিযোগিতায় গ্রহণযোগ্য। অন্য কোনো ধারার গান অনুমোদিত নয়।",
+      answer: "শুধুমাত্র ভাওয়াইয়া বা লোকসংগীত এই প্রতিযোগিতায় গ্রহণযোগ্য। অন্য কোনো ধারার গান অনুমোদিত নয়।",
       icon: "🎵"
     },
     { 
       question: "অংশগ্রহণের ফি কত?", 
-      answer: "প্রথম ধাপের অডিশনের জন্য **২০০ টাকা (₹200)** ফি প্রযোজ্য। যা রেজিস্ট্রেশন লিঙ্কে পেমেন্ট করতে হবে।",
+      answer: "প্রথম ধাপের অডিশনের জন্য ২০০ টাকা (₹২০০) ফি প্রযোজ্য। যা রেজিস্ট্রেশন লিঙ্কে পেমেন্ট করতে হবে।",
       icon: "💰"
     },
     { 
       question: "বিজয়ীকে কি শুধু টাকা দেওয়া হবে?", 
-      answer: "না। গ্র্যান্ড চ্যাম্পিয়ন পুরস্কারের অর্থ ছাড়াও **UJAN ETV চ্যানেলে একটি মিউজিক ভিডিও** প্রকাশের সুযোগ পাবেন।",
+      answer: "না। গ্র্যান্ড চ্যাম্পিয়ন পুরস্কারের অর্থ ছাড়াও UJAN ETV চ্যানেলে একটি অফিশিয়াল মিউজিক ভিডিও প্রকাশের সুযোগ পাবেন।",
       icon: "🏆"
     },
     { 
@@ -42,7 +41,7 @@ const FAQSection = () => {
     },
     { 
       question: "গানের সময়সীমা কত?", 
-      answer: "অডিশনের জন্য গানের সময়সীমা সর্বোচ্চ ৩ মিনিটার। সম্পূর্ণ গান রেকর্ড করে জমা দিতে হবে।",
+      answer: "অডিশনের জন্য গানের সময়সীমা সর্বোচ্চ ৩ মিনিট। সম্পূর্ণ গান রেকর্ড করে জমা দিতে হবে।",
       icon: "⏱️"
     },
     { 
@@ -57,14 +56,15 @@ const FAQSection = () => {
     }
   ];
 
-  const displayedFaqs = showAllFAQs ? allFaqs : allFaqs.slice(0, 2);
+  const displayedFaqs = showAllFAQs ? allFaqs : allFaqs.slice(0, 4);
 
   return (
     <section id="faq" className="faq-section">
       <div className="container">
         <div className="section-header">
+          <div className="stage-badge-sm">❓ নির্দেশিকা</div>
           <h2 className="section-title">প্রশ্নোত্তর ও নিয়মাবলী</h2>
-          <p className="section-subtitle">প্রতিযোগিতা সম্পর্কিত সাধারণ প্রশ্ন ও উত্তর</p>
+          <p className="section-subtitle">প্রতিযোগিতা সম্পর্কিত সাধারণ প্রশ্নাবলী ও গুরুত্বপূর্ণ নিয়মাবলীর সংকলন</p>
         </div>
         
         <div className="faq-container">
@@ -88,14 +88,12 @@ const FAQSection = () => {
           ))}
         </div>
 
-        {/* View All FAQ Button */}
         <div className="text-center mb-5">
           <button 
-            className="btn btn-outline-primary view-all-faq-btn"
+            className="view-all-faq-btn"
             onClick={toggleShowAllFAQs}
           >
-            <i className={`fas ${showAllFAQs ? 'fa-eye-slash' : 'fa-eye'} me-2`}></i>
-            {showAllFAQs ? 'কম দেখান' : 'সমস্ত FAQ দেখুন'}
+            {showAllFAQs ? 'কম দেখান ▴' : 'সমস্ত FAQ দেখুন ▾'}
           </button>
         </div>
 
@@ -127,11 +125,11 @@ const FAQSection = () => {
 
         <div className="text-center mt-5">
           <div className="cta-buttons">
-            <a href="/full-rules-doc" className="btn btn-primary full-rules-cta">
-              <i className="fas fa-file-alt me-2"></i> সম্পূর্ণ নিয়মাবলী পড়ুন
+            <a href="/full-rules-doc" className="full-rules-cta">
+              সম্পূর্ণ নিয়মাবলী পড়ুন <span>→</span>
             </a>
-            <a href="/register" className="btn btn-secondary register-cta">
-              <i className="fas fa-user-plus me-2"></i> এখনই রেজিস্টার করুন
+            <a href="/register" className="register-cta">
+              এখনই রেজিস্টার করুন <span>→</span>
             </a>
           </div>
         </div>

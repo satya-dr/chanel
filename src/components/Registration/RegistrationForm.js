@@ -1,4 +1,3 @@
-// src/components/Registration/RegistrationForm.js
 import React, { useState } from 'react';
 import './RegistrationForm.css';
 
@@ -39,12 +38,10 @@ const RegistrationForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate API call
     setTimeout(() => {
       console.log('Form submitted:', formData);
       setIsSubmitting(false);
       alert('আপনার রেজিস্ট্রেশন সফলভাবে জমা হয়েছে!');
-      // Reset form or redirect
     }, 2000);
   };
 
@@ -58,28 +55,26 @@ const RegistrationForm = () => {
   return (
     <section className="registration-section">
       <div className="container">
-        {/* Competition Header */}
         <div className="competition-header">
-          <div className="competition-badge">নিবন্ধন চলছে</div>
+          <div className="competition-badge">🔴 নিবন্ধন চলছে</div>
           <h1 className="competition-title">{competitionInfo.title}</h1>
           <div className="competition-details">
             <div className="detail-item">
-              <i className="fas fa-trophy"></i>
+              <span className="detail-icon">🎁</span>
               <span>পুরস্কার: {competitionInfo.prize}</span>
             </div>
             <div className="detail-item">
-              <i className="fas fa-clock"></i>
+              <span className="detail-icon">⏰</span>
               <span>শেষ তারিখ: {competitionInfo.deadline}</span>
             </div>
             <div className="detail-item">
-              <i className="fas fa-money-bill-wave"></i>
-              <span>রেজিস্ট্রেশন ফি: {competitionInfo.fee}</span>
+              <span className="detail-icon">💳</span>
+              <span>ফি: {competitionInfo.fee}</span>
             </div>
           </div>
         </div>
 
         <div className="registration-container">
-          {/* Progress Bar */}
           <div className="progress-container">
             <div className="progress-bar">
               <div 
@@ -104,7 +99,6 @@ const RegistrationForm = () => {
           </div>
 
           <form onSubmit={handleSubmit} className="registration-form">
-            {/* Step 1: Personal Information */}
             {currentStep === 1 && (
               <div className="form-step">
                 <h3 className="step-title">ব্যক্তিগত তথ্য</h3>
@@ -131,7 +125,7 @@ const RegistrationForm = () => {
                       value={formData.phone}
                       onChange={handleInputChange}
                       required
-                      placeholder="০১XXXXXXXXX"
+                      placeholder="০১৮XXXXXXXX"
                     />
                   </div>
 
@@ -177,14 +171,14 @@ const RegistrationForm = () => {
                 </div>
 
                 <div className="form-actions">
+                  <div></div>
                   <button type="button" className="btn-next" onClick={nextStep}>
-                    পরবর্তী ধাপ <i className="fas fa-arrow-right"></i>
+                    পরবর্তী ধাপ <span>→</span>
                   </button>
                 </div>
               </div>
             )}
 
-            {/* Step 2: Music Information */}
             {currentStep === 2 && (
               <div className="form-step">
                 <h3 className="step-title">সংগীত তথ্য</h3>
@@ -230,7 +224,7 @@ const RegistrationForm = () => {
                       required
                     >
                       <option value="">অভিজ্ঞতা নির্বাচন করুন</option>
-                      <option value="শুরু">শুরু (০-১ বছর)</option>
+                      <option value="শুরু">প্রাথমিক (০-১ বছর)</option>
                       <option value="মধ্যম">মধ্যম (১-৩ বছর)</option>
                       <option value="অভিজ্ঞ">অভিজ্ঞ (৩+ বছর)</option>
                       <option value="পেশাদার">পেশাদার</option>
@@ -238,7 +232,7 @@ const RegistrationForm = () => {
                   </div>
 
                   <div className="form-group full-width">
-                    <label htmlFor="videoLink">ভিডিও লিঙ্ক (YouTube/Google Drive) *</label>
+                    <label htmlFor="videoLink">ভিডিও লিঙ্ক (YouTube/Drive) *</label>
                     <input
                       type="url"
                       id="videoLink"
@@ -249,37 +243,36 @@ const RegistrationForm = () => {
                       placeholder="https://youtube.com/your-video"
                     />
                     <small className="help-text">
-                      আপনার গানের ভিডিওর লিঙ্ক দিন (সর্বোচ্চ ৩ মিনিট)
+                      আপনার পরিবেশনের ভিডিও লিঙ্ক প্রদান করুন (সর্বোচ্চ ৩ মিনিট)
                     </small>
                   </div>
                 </div>
 
                 <div className="form-actions">
                   <button type="button" className="btn-prev" onClick={prevStep}>
-                    <i className="fas fa-arrow-left"></i> পূর্ববর্তী
+                    <span>←</span> পূর্ববর্তী
                   </button>
                   <button type="button" className="btn-next" onClick={nextStep}>
-                    পরবর্তী ধাপ <i className="fas fa-arrow-right"></i>
+                    পরবর্তী ধাপ <span>→</span>
                   </button>
                 </div>
               </div>
             )}
 
-            {/* Step 3: Confirmation */}
             {currentStep === 3 && (
               <div className="form-step">
-                <h3 className="step-title">নিশ্চিতকরণ</h3>
+                <h3 className="step-title">তথ্য নিশ্চিতকরণ</h3>
                 
                 <div className="confirmation-section">
                   <div className="confirmation-card">
-                    <h4>আপনার তথ্য পর্যালোচনা করুন</h4>
+                    <h4>আপনার প্রদত্ত তথ্য মিলিয়ে নিন</h4>
                     
                     <div className="review-info">
                       <div className="info-group">
                         <h5>ব্যক্তিগত তথ্য</h5>
                         <p><strong>নাম:</strong> {formData.fullName}</p>
                         <p><strong>মোবাইল:</strong> {formData.phone}</p>
-                        <p><strong>ইমেইল:</strong> {formData.email || 'না দেওয়া হয়েছে'}</p>
+                        <p><strong>ইমেইল:</strong> {formData.email || 'দেওয়া হয়নি'}</p>
                         <p><strong>বয়স:</strong> {formData.age} বছর</p>
                         <p><strong>ঠিকানা:</strong> {formData.address}</p>
                       </div>
@@ -291,7 +284,7 @@ const RegistrationForm = () => {
                         <p><strong>অভিজ্ঞতা:</strong> {formData.experience}</p>
                         <p><strong>ভিডিও লিঙ্ক:</strong> 
                           <a href={formData.videoLink} target="_blank" rel="noopener noreferrer">
-                            লিঙ্ক দেখুন
+                            লিঙ্ক দেখুন 🔗
                           </a>
                         </p>
                       </div>
@@ -306,8 +299,7 @@ const RegistrationForm = () => {
                           onChange={handleInputChange}
                           required
                         />
-                        <span className="checkmark"></span>
-                        আমি প্রতিযোগিতার সকল নিয়ম ও শর্তাবলী পড়েছি এবং মেনে চলতে সম্মত আছি *
+                        <span>আমি প্রতিযোগিতার সকল নিয়ম ও শর্তাবলী সজ্ঞানচিত্তে মেনে নিতে সম্মত। *</span>
                       </label>
                     </div>
                   </div>
@@ -315,58 +307,49 @@ const RegistrationForm = () => {
 
                 <div className="form-actions">
                   <button type="button" className="btn-prev" onClick={prevStep}>
-                    <i className="fas fa-arrow-left"></i> পূর্ববর্তী
+                    <span>←</span> পূর্ববর্তী
                   </button>
                   <button 
                     type="submit" 
                     className="btn-submit"
                     disabled={!formData.termsAccepted || isSubmitting}
                   >
-                    {isSubmitting ? (
-                      <>
-                        <i className="fas fa-spinner fa-spin"></i> জমা হচ্ছে...
-                      </>
-                    ) : (
-                      <>
-                        <i className="fas fa-check"></i> নিবন্ধন সম্পন্ন করুন
-                      </>
-                    )}
+                    {isSubmitting ? 'জমা হচ্ছে...' : 'নিবন্ধন সম্পন্ন করুন ✓'}
                   </button>
                 </div>
               </div>
             )}
           </form>
 
-          {/* Competition Rules Sidebar */}
           <div className="rules-sidebar">
-            <h4>প্রতিযোগিতার নিয়মাবলী</h4>
+            <h4>নির্দেশাবলী</h4>
             <div className="rules-list">
               <div className="rule-item">
-                <i className="fas fa-music"></i>
+                <span className="rule-icon">🎵</span>
                 <span>শুধুমাত্র ভাওয়াইয়া বা লোকসংগীত</span>
               </div>
               <div className="rule-item">
-                <i className="fas fa-user"></i>
-                <span>বয়স ১৬-৪০ বছর</span>
+                <span className="rule-icon">👤</span>
+                <span>বয়সসীমা ১৬-৪০ বছর</span>
               </div>
               <div className="rule-item">
-                <i className="fas fa-clock"></i>
-                <span>গানের সময়সীমা সর্বোচ্চ ৩ মিনিট</span>
+                <span className="rule-icon">⏱️</span>
+                <span>ভিডিও দৈর্ঘ্য সর্বোচ্চ ৩ মিনিট</span>
               </div>
               <div className="rule-item">
-                <i className="fas fa-money-bill"></i>
-                <span>রেজিস্ট্রেশন ফি: ২০০ টাকা</span>
+                <span className="rule-icon">💳</span>
+                <span>নিবন্ধন ফি: ২০০ টাকা</span>
               </div>
               <div className="rule-item">
-                <i className="fas fa-trophy"></i>
-                <span>গ্র্যান্ড প্রাইজ: ১,০০,০০০ টাকা</span>
+                <span className="rule-icon">🏆</span>
+                <span>প্রথম পুরস্কার: ১,০০,০০০ টাকা</span>
               </div>
             </div>
 
             <div className="contact-info">
-              <h5>যোগাযোগ</h5>
-              <p><i className="fas fa-phone"></i> +৮৮০১৭XXXXXXXX</p>
-              <p><i className="fas fa-envelope"></i> ujanetv@gmail.com</p>
+              <h5>সাহায্যের জন্য</h5>
+              <p><span className="c-icon">📞</span> +৯১ XXXXXXX২৬৮</p>
+              <p><span className="c-icon">✉️</span> satyajit@gmail.com</p>
             </div>
           </div>
         </div>

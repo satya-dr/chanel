@@ -1,8 +1,23 @@
-/* src/components/LiveShows/LiveShows.css */
 .live-shows-section {
-  padding: 100px 0 80px;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 85px 0;
+  background: radial-gradient(circle at center, #3E1D0F 0%, #241007 60%, #130703 100%);
   min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  color: #FFF;
+  border-top: 1px solid rgba(255, 215, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.live-shows-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.04) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .live-shows-section .container {
@@ -10,144 +25,219 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+  position: relative;
+  z-index: 2;
 }
 
 .live-shows-section .section-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 45px;
+}
+
+.live-shows-section .stage-badge-sm {
+  display: inline-block;
+  background: rgba(255, 215, 0, 0.15);
+  border: 1px solid #FFD700;
+  color: #FFD700;
+  padding: 5px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
 .live-shows-section .section-title {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 800;
-  color: #8B0000;
-  margin-bottom: 15px;
-  font-family: 'SolaimanLipi', 'Noto Sans Bengali', sans-serif;
+  background: linear-gradient(45deg, #FFE066, #FF9900, #FF5500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+  line-height: 1.2;
 }
 
 .live-shows-section .section-subtitle {
-  font-size: 1.2rem;
-  color: #666;
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.8);
   max-width: 600px;
   margin: 0 auto;
+  line-height: 1.5;
 }
 
 .shows-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 28px;
 }
 
 .show-card {
-  background: white;
-  border-radius: 20px;
+  background: rgba(45, 20, 10, 0.65);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  border: 1.5px solid rgba(255, 215, 0, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  flex-direction: column;
 }
 
 .show-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  border-color: #FFD700;
+  box-shadow: 0 15px 35px rgba(255, 215, 0, 0.25);
 }
 
 .show-image {
   position: relative;
-  height: 250px;
+  height: 220px;
   overflow: hidden;
+  background: #1A0B05;
 }
 
 .show-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
 }
 
 .show-card:hover .show-image img {
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
 
 .live-badge {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  background: #DC143C;
+  top: 12px;
+  right: 12px;
+  background: linear-gradient(45deg, #DC143C, #B22222);
+  border: 1px solid rgba(255, 215, 0, 0.5);
   color: white;
-  padding: 8px 15px;
+  padding: 6px 14px;
   border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  animation: pulse 2s infinite;
+  font-size: 0.78rem;
+  font-weight: 700;
+  animation: livePulse 2s infinite ease-in-out;
+  box-shadow: 0 4px 12px rgba(220, 20, 60, 0.5);
 }
 
-@keyframes pulse {
-  0% { opacity: 1; }
-  50% { opacity: 0.7; }
-  100% { opacity: 1; }
+@keyframes livePulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.85; }
+  100% { transform: scale(1); opacity: 1; }
 }
 
 .show-info {
-  padding: 25px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .show-title {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  color: #333;
+  color: #FFF;
   margin-bottom: 8px;
-  font-family: 'SolaimanLipi', 'Noto Sans Bengali', sans-serif;
+  line-height: 1.4;
 }
 
 .show-artist {
-  color: #666;
-  margin-bottom: 20px;
-  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.artist-icon {
+  font-size: 0.9rem;
 }
 
 .show-details {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   margin-bottom: 20px;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 215, 0, 0.15);
 }
 
 .detail {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #666;
-  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.88rem;
 }
 
-.detail i {
-  color: #8B0000;
-  width: 16px;
+.detail-icon {
+  font-size: 0.95rem;
+  width: 20px;
+  text-align: center;
 }
 
 .reminder-btn {
   width: 100%;
-  padding: 12px;
-  background: linear-gradient(135deg, #8B0000, #B22222);
+  padding: 11px;
+  background: linear-gradient(45deg, #DC143C, #B22222);
   color: white;
-  border: none;
+  border: 1px solid rgba(255, 215, 0, 0.3);
   border-radius: 10px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+  font-size: 0.95rem;
+  margin-top: auto;
+  box-shadow: 0 4px 15px rgba(220, 20, 60, 0.3);
 }
 
 .reminder-btn:hover {
-  background: linear-gradient(135deg, #B22222, #DC143C);
+  background: linear-gradient(45deg, #B22222, #DC143C);
   transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(220, 20, 60, 0.5);
+  color: white;
 }
 
 @media (max-width: 768px) {
+  .live-shows-section {
+    padding: 50px 0;
+  }
+
+  .live-shows-section .section-title {
+    font-size: 2rem;
+  }
+
+  .live-shows-section .section-subtitle {
+    font-size: 0.95rem;
+  }
+
   .shows-container {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .live-shows-section {
+    padding: 40px 0;
+  }
+
+  .live-shows-section .section-title {
+    font-size: 1.6rem;
+  }
+
+  .show-info {
+    padding: 16px;
+  }
+
+  .show-title {
+    font-size: 1.15rem;
   }
 }

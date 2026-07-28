@@ -20,6 +20,204 @@ export const artistsData = {
       category: "Popular"
     },
     {
+      id: 2,
+      name: "ফরিদা পারভীন",
+      image: "/images/artists/farida-parvin.jpg",
+      bio: "উত্তরবঙ্গের কণ্ঠশিল্পী",
+      songs: 35,
+      followers: "890K",
+      category: "Popular"
+    },
+    {
+      id: 2,
+      name: "ফরিদা পারভীন",
+      image: "/images/artists/farida-parvin.jpg",
+      bio: "উত্তরবঙ্গের কণ্ঠশিল্পী",
+      songs: 35,
+      followers: "890K",
+      category: "Popular"
+    },
+    {
+      id: 2,
+      name: "ফরিদা পারভীন",
+      image: "/images/artists/farida-parvin.jpg",
+      bio: "উত্তরবঙ্গের কণ্ঠশিল্পী",
+      songs: 35,
+      followers: "890K",
+      category: "Popular"
+    },
+    {
+      id: 2,
+      name: "ফরিদা পারভীন",
+      image: "/images/artists/farida-parvin.jpg",
+      bio: "উত্তরবঙ্গের কণ্ঠশিল্পী",
+      songs: 35,
+      followers: "890K",
+      category: "Popular"
+    },
+    {
+      id: 2,
+      name: "ফরিদা পারভীন",
+      image: "/images/artists/farida-parvin.jpg",
+      bio: "উত্তরবঙ্গের কণ্ঠশিল্পী",
+      songs: 35,
+      followers: "890K",
+      category: "Popular"
+    },
+    {
+      id: 2,
+      name: "ফরিদা পারভীন",
+      image: "/images/artists/farida-parvin.jpg",
+      bio: "উত্তরবঙ্গের কণ্ঠশিল্পী",
+      songs: 35,
+      followers: "890K",
+      category: "Popular"
+    },
+    {
+      id: 2,
+      name: "ফরিদা পারভীন",
+      image: "/images/artists/farida-parvin.jpg",
+      bio: "উত্তরবঙ্গের কণ্ঠশিল্পী",
+      songs: 35,
+      followers: "890K",
+      category: "Popular"
+    },
+    {
+      id: 2,
+      name: "ফরিদা পারভীন",
+      image: "/images/artists/farida-parvin.jpg",
+      bio: "উত্তরবঙ্গের কণ্ঠশিল্পী",
+      songs: 35,
+      followers: "890K",
+      category: "Popular"
+    },
+    {
+      id: 2,
+      name: "ফরিদা পারভীন",
+      image: "/images/artists/farida-parvin.jpg",
+      bio: "উত্তরবঙ্গের কণ্ঠশিল্পী",
+      songs: 35,
+      followers: "890K",
+      category: "Popular"
+    },
+    {
+      id: 2,
+      name: "ফরিদা পারভীন",
+      image: "/images/artists/farida-parvin.jpg",
+      bio: "উত্তরবঙ্গের কণ্ঠশিল্পী",
+      songs: 35,
+      followers: "890K",
+      category: "Popular"
+    },
+    {
+      id: 2,
+      name: "ফরিদা পারভীন",
+      image: "/images/artists/farida-parvin.jpg",
+      bio: "উত্তরবঙ্গের কণ্ঠশিল্পী",
+      songs: 35,
+      followers: "890K",
+      category: "Popular"
+    },
+    {
+      id: 2,
+      name: "ফরিদা পারভীন",
+      image: "/images/artists/farida-parvin.jpg",
+      bio: "উত্তরবঙ্গের কণ্ঠশিল্পী",
+      songs: 35,
+      followers: "890K",
+      category: "Popular"
+    },
+    {
+      id: 2,
+      name: "ফরিদা পারভীন",
+      image: "/images/artists/farida-parvin.jpg",
+      bio: "উত্তরবঙ্গের কণ্ঠশিল্পী",
+      songs: 35,
+      followers: "890K",
+      category: "Popular"
+    },
+    {
+      id: 2,
+      name: "ফরিদা পারভীন",
+      image: "/images/artists/farida-parvin.jpg",
+      bio: "উত্তরবঙ্গের কণ্ঠশিল্পী",
+      songs: 35,
+      followers: "890K",
+      category: "Popular"
+    },
+    {
+      id: 2,
+      name: "ফরিদা পারভীন",
+      image: "/images/artists/farida-parvin.jpg",
+      bio: "উত্তরবঙ্গের কণ্ঠশিল্পী",
+      songs: 35,
+      followers: "890K",
+      category: "Popular"
+    },
+    {
+      id: 2,
+      name: "ফরিদা পারভীন",
+      image: "/images/artists/farida-parvin.jpg",
+      bio: "উত্তরবঙ্গের কণ্ঠশিল্পী",
+      songs: 35,
+      followers: "890K",
+      category: "Popular"
+    },
+    {
+      id: 2,
+      name: "ফরিদা পারভীন",
+      image: "/images/artists/farida-parvin.jpg",
+      bio: "উত্তরবঙ্গের কণ্ঠশিল্পী",
+      songs: 35,
+      followers: "890K",
+      category: "Popular"
+    },
+    {
+      id: 2,
+      name: "ফরিদা পারভীন",
+      image: "/images/artists/farida-parvin.jpg",
+      bio: "উত্তরবঙ্গের কণ্ঠশিল্পী",
+      songs: 35,
+      followers: "890K",
+      category: "Popular"
+    },
+    {
+      id: 2,
+      name: "ফরিদা পারভীন",
+      image: "/images/artists/farida-parvin.jpg",
+      bio: "উত্তরবঙ্গের কণ্ঠশিল্পী",
+      songs: 35,
+      followers: "890K",
+      category: "Popular"
+    },
+    {
+      id: 2,
+      name: "ফরিদা পারভীন",
+      image: "/images/artists/farida-parvin.jpg",
+      bio: "উত্তরবঙ্গের কণ্ঠশিল্পী",
+      songs: 35,
+      followers: "890K",
+      category: "Popular"
+    },
+    {
+      id: 2,
+      name: "ফরিদা পারভীন",
+      image: "/images/artists/farida-parvin.jpg",
+      bio: "উত্তরবঙ্গের কণ্ঠশিল্পী",
+      songs: 35,
+      followers: "890K",
+      category: "Popular"
+    },
+    {
+      id: 2,
+      name: "ফরিদা পারভীন",
+      image: "/images/artists/farida-parvin.jpg",
+      bio: "উত্তরবঙ্গের কণ্ঠশিল্পী",
+      songs: 35,
+      followers: "890K",
+      category: "Popular"
+    },
+    {
       id: 3,
       name: "রশিদ উদ্দিন",
       image: "/images/artists/rashid-uddin.jpg",
@@ -37,6 +235,106 @@ export const artistsData = {
 // src/data/newSongs.js
 export const newSongsData = {
   recent: [
+    {
+      id: 1,
+      title: "নদীর কূল ভাঙে",
+      artist: "আব্বাস উদ্দিন",
+      duration: "4:32",
+      views: "1.5M",
+      image: "/images/songs/nodir-kul.jpg",
+      releaseDate: "২০২৪-০১-১৫",
+      link: "https://youtube.com/watch?v=1"
+    },
+    {
+      id: 1,
+      title: "নদীর কূল ভাঙে",
+      artist: "আব্বাস উদ্দিন",
+      duration: "4:32",
+      views: "1.5M",
+      image: "/images/songs/nodir-kul.jpg",
+      releaseDate: "২০২৪-০১-১৫",
+      link: "https://youtube.com/watch?v=1"
+    },
+    {
+      id: 1,
+      title: "নদীর কূল ভাঙে",
+      artist: "আব্বাস উদ্দিন",
+      duration: "4:32",
+      views: "1.5M",
+      image: "/images/songs/nodir-kul.jpg",
+      releaseDate: "২০২৪-০১-১৫",
+      link: "https://youtube.com/watch?v=1"
+    },
+    {
+      id: 1,
+      title: "নদীর কূল ভাঙে",
+      artist: "আব্বাস উদ্দিন",
+      duration: "4:32",
+      views: "1.5M",
+      image: "/images/songs/nodir-kul.jpg",
+      releaseDate: "২০২৪-০১-১৫",
+      link: "https://youtube.com/watch?v=1"
+    },
+    {
+      id: 1,
+      title: "নদীর কূল ভাঙে",
+      artist: "আব্বাস উদ্দিন",
+      duration: "4:32",
+      views: "1.5M",
+      image: "/images/songs/nodir-kul.jpg",
+      releaseDate: "২০২৪-০১-১৫",
+      link: "https://youtube.com/watch?v=1"
+    },
+    {
+      id: 1,
+      title: "নদীর কূল ভাঙে",
+      artist: "আব্বাস উদ্দিন",
+      duration: "4:32",
+      views: "1.5M",
+      image: "/images/songs/nodir-kul.jpg",
+      releaseDate: "২০২৪-০১-১৫",
+      link: "https://youtube.com/watch?v=1"
+    },
+    {
+      id: 1,
+      title: "নদীর কূল ভাঙে",
+      artist: "আব্বাস উদ্দিন",
+      duration: "4:32",
+      views: "1.5M",
+      image: "/images/songs/nodir-kul.jpg",
+      releaseDate: "২০২৪-০১-১৫",
+      link: "https://youtube.com/watch?v=1"
+    },
+    {
+      id: 1,
+      title: "নদীর কূল ভাঙে",
+      artist: "আব্বাস উদ্দিন",
+      duration: "4:32",
+      views: "1.5M",
+      image: "/images/songs/nodir-kul.jpg",
+      releaseDate: "২০২৪-০১-১৫",
+      link: "https://youtube.com/watch?v=1"
+    },
+    {
+      id: 1,
+      title: "নদীর কূল ভাঙে",
+      artist: "আব্বাস উদ্দিন",
+      duration: "4:32",
+      views: "1.5M",
+      image: "/images/songs/nodir-kul.jpg",
+      releaseDate: "২০২৪-০১-১৫",
+      link: "https://youtube.com/watch?v=1"
+    },
+    {
+      id: 1,
+      title: "নদীর কূল ভাঙে",
+      artist: "আব্বাস উদ্দিন",
+      duration: "4:32",
+      views: "1.5M",
+      image: "/images/songs/nodir-kul.jpg",
+      releaseDate: "২০২৪-০১-১৫",
+      link: "https://youtube.com/watch?v=1"
+    },
     {
       id: 1,
       title: "নদীর কূল ভাঙে",

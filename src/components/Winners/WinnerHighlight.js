@@ -1,13 +1,12 @@
 // src/components/Winners/WinnerHighlight.js
 import React from 'react';
-import './Winners.css'; // WinnerCard এর CSS ব্যবহার করা হবে
+import './Winners.css'; 
 
 const WinnerHighlight = ({ winner }) => {
   return (
     <div className="col-lg-12 mb-5">
       <div className="winner-highlight-card">
         <div className="highlight-image">
-          {/* এইখানে বিজয়ীর ছবি বা YouTube Thumbnail ব্যবহার করতে পারেন */}
           <i className="fas fa-crown"></i>
         </div>
         <div className="highlight-content">
